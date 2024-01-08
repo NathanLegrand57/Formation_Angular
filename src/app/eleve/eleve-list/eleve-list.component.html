@@ -1,0 +1,31 @@
+<h1 class="mt-5">Liste des élèves</h1>
+
+<div class="container1">
+    <div class="container2">
+
+        <div class="m-3 fw-semibold" *ngFor="let eleve of eleveList; let i = index">
+            <p>
+                {{ eleve.name}} {{eleve.surname}}
+                <button class="bg-danger ms-3 ps-4 pe-4 pt-1 pb-1 border-0 rounded-2 text-white" (click)="deleteItem(i)">Virer</button>
+            </p>
+        </div>
+
+        <button class="bg-success mt-5 ps-4 pe-4 pt-1 pb-1 rounded-3 text-white border-0 fs-5" (click)="newEleve()" *ngIf="!addedEleve">Ajouter
+            un
+            élève</button>
+
+        <div class="addEleve" *ngIf="addedEleve">
+            <form (ngSubmit)="addEleve()">
+                <input class="mt-3 ms-3" type="number" required maxlength="50" [(ngModel)]="newEleveId" name="newEleveId" placeholder="Id...">
+                <input class="mt-5 ms-3" type="text" maxlength="50" [(ngModel)]="newEleveName"
+                    name="newEleveName" placeholder="Nom...">
+                <br>
+                <input class="mt-3 ms-3" type="text" required maxlength="50" [(ngModel)]="newEleveSurname"
+                    name="newEleveSurname" placeholder="Prénom...">
+                <br>
+                <button class="bg-success mt-5 ps-4 pe-4 pt-1 pb-1 rounded-3 text-white border-0 fs-5"
+                    type="submit">Ajouter</button>
+            </form>
+        </div>
+    </div>
+</div>

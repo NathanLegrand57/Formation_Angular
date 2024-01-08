@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+
+    <a class="navbar-brand bg-success mx-auto ps-3 pe-3 rounded-3 text-white" (click)="GoToElevesList()">Liste des élèves</a>
+    <a class="navbar-brand bg-primary mx-auto ps-3 pe-3 rounded-3 text-white" (click)="GoToElevesFilter()">Filtre des élèves</a>
+
+</nav>
+
+<router-outlet></router-outlet>
+
+<!-- <h1>Liste des élèves</h1>
+
+<input class="ms-3" type="number" placeholder="Entrer l'id d'un élève" #test (keyup.enter)="selectEleve(test.value)">
+
+<p class="m-3" *ngIf="eleveSelected">Vous avez sélectionné l'élève : {{ eleveSelected?.name }} {{eleveSelected?.surname}}</p>
+
+<p class="m-3" *ngIf="!eleveSelected">L'élève sélectionné n'existe pas !</p>
+
+
+<div class="m-3 fw-semibold" *ngFor="let eleve of eleveList">
+    <p>
+        {{ eleve.name}} {{eleve.surname}}
+        <button class="button-danger">Supprimer</button>
+    </p>
+    
+</div> 
+-->
