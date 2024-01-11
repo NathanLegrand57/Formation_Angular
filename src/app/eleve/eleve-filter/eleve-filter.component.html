@@ -1,12 +1,15 @@
-<h1 class="mt-5">Filtrer les élèves</h1>
+<h1>Filtrer les élèves</h1>
 
 <div class="container1">
     <div class="container2">
-        <input class="ms-3 mh-100 w-50" type="text" placeholder="Filtrer par prénom..." #filter>
+        <input class="ms-3 mh-100 w-50 p-2" type="text" placeholder="Filtrer par prénom..." #filter>
 
-        <button class="bg-primary ms-3 mb-3 ps-4 pe-4 pt-1 pb-1 border-0 rounded-2 text-white" type="button" (click)="filterResults(filter.value)">Chercher</button>
+        <button class="bg-primary ms-3 mb-3 ps-4 pe-4 pt-2 pb-2 border-0 rounded-2 text-white fs-5" type="button" (click)="filterResults(filter.value)">Chercher</button>
 
-        <div class="m-3 fw-semibold" *ngFor="let eleve of filteredEleveList">
+        <mat-progress-spinner *ngIf="loading" [color]="color" [mode]="mode" [value]="value">
+        </mat-progress-spinner>
+
+        <div class="m-3" *ngFor="let eleve of filteredEleveList">
             <p>
                 {{ eleve.name }}
                 {{ eleve.surname }}

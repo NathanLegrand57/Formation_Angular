@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EleveModule } from './eleve/eleve.module';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+
 
 @NgModule({
   declarations: [
@@ -13,6 +15,7 @@ import { EleveModule } from './eleve/eleve.module';
     BrowserModule,
     EleveModule,
     FormsModule,
+    MatProgressSpinnerModule,
     AppRoutingModule,
   ],
   providers: [

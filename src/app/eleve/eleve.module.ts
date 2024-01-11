@@ -4,6 +4,8 @@ import { EleveListComponent } from './eleve-list/eleve-list.component';
 import { EleveFilterComponent } from './eleve-filter/eleve-filter.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 export const eleveRoutes: Routes = [
   { path: 'eleves', component: EleveListComponent },
@@ -19,6 +21,8 @@ export const eleveRoutes: Routes = [
     CommonModule,
     RouterModule.forChild(eleveRoutes),
     FormsModule,
+    HttpClientModule,
+    MatProgressSpinnerModule
   ]
 })
 export class EleveModule { }
