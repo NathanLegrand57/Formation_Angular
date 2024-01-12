@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Eleve } from './eleve';
-import { ELEVES } from './mock-eleve-list';
+import { Eleve } from '../eleve/eleve';
+import { ELEVES } from '../eleve/mock-eleve-list';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
 

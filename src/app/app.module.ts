@@ -3,8 +3,9 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { EleveModule } from './eleve/eleve.module';
+import { EleveModule } from './module/eleve.module';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { ErrorInterceptorService } from './service/error-interceptor.service';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     AppRoutingModule,
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    ErrorInterceptorService,
   ],
   bootstrap: [AppComponent]
 })

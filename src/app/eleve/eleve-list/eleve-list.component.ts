@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Eleve } from '../eleve';
-import { EleveService } from '../eleve.service';
+import { EleveService } from '../../service/eleve.service';
 import { Router } from '@angular/router';
 import { ELEVES } from '../mock-eleve-list';
 import { Observable } from 'rxjs/internal/Observable';
@@ -38,7 +38,8 @@ export class EleveListComponent implements OnInit {
         this.eleveList = data;
       },
       error: error => {
-        console.error("Erreur lors de la récupération des élèves :", error);
+        // console.error("Erreur lors de la récupération des élèves :");
+        // confirm("test"+error);
       }
     });
   }
@@ -57,7 +58,7 @@ export class EleveListComponent implements OnInit {
               this.loading = false;
             },
             error: error => {
-              console.log("Erreur lors de la suppression de l'élève: " + error);
+              // console.log("Erreur lors de la suppression de l'élève: " + error);
               this.loading = false;
             }
           });
@@ -86,7 +87,7 @@ export class EleveListComponent implements OnInit {
         this.loading = false;
       },
       error: err => {
-        console.log("Erreur lors de l'ajout de l'élève: " + err);
+        // console.log("Erreur lors de l'ajout de l'élève: " + err);
         this.loading = false;
       }
     });
